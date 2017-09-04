@@ -44,6 +44,7 @@ class ViewController: UIViewController, ZXCaptureDelegate {
         
         super.viewWillAppear(animated)
         
+        // LALIT - Added to explicitly start the image capture. But it stil does not work.
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(2)*Int64(NSEC_PER_SEC)) / Double(NSEC_PER_SEC)) { () -> Void in
             self.capture.start()
         }
